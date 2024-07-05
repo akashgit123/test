@@ -10,6 +10,7 @@ router.post("/create", async (req, res) => {
     await user.save();
     res.status(201).json(user);
   } catch (error) {
+    console.log("first");
     res.status(400).json({ message: error.message });
   }
 });
